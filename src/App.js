@@ -1,19 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ProductTable from './Component/ProductTable';
 
-import React from 'react';
-import { Container } from 'reactstrap';
 
-const Example = (props) => {
+const products = [{name:'tv',price:'500',category:'electronics'},
+{name:'tshirt',price:'500',category:'clothes'}]
+
+const App = (props) => {
+
   return (
     <>
-      <Container className="Product">.container</Container>
-      <Container className="Name" fluid="sm">.container-sm</Container>
-      <Container className="Category" fluid="md">.container-md</Container>
-      <Container className="price" fluid="lg">.container-lg</Container>
+<ProductTable products={products}/>
+    </>
       
   );
 }
 
-export default Example;
+export default App;
